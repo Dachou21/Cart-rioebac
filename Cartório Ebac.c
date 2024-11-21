@@ -110,7 +110,7 @@
    else
    { 
    remove(cpf);
-   printf("CPF removido com sucesso");
+   printf("CPF removido com sucesso!Uma pena não continuar conosco:/");
    system("pause");
    }
 
@@ -130,32 +130,49 @@
     {
     int opcao=0;//Definindo variáveis
 	int x=1;
-	for(x=1;x=1;)
-    {
+	char senhadigitada[10]="a";
+	int comparacao;
 	
+	printf("##Cartório da Ebac##\n\n");
+	printf("Login de administrador!\n\nDigite sua senha\t");
+	scanf("%s",senhadigitada);
+
+	setlocale(LC_ALL,"Portuguese");//Definiindo a linguagem
 	
+	comparacao=strcmp(senhadigitada,"admin");
 	
-	system("cls");
-	
-	
-	
-	
-	setlocale(LC_ALL,"Portuguese");//Definindo a linguagem
-	
-	printf("\t!Cartório da Ebac!\t\n\n");//Inicio do menu
-	printf("\tPor favor,selecione uma das opções abaixo:\n");
-	printf("\t1-registrar nomes\n");
-	printf("\t2-Consultar nomes\n");
-	printf("\t3-Deletar nomes\n\n\n");
-	printf("\t4-Sair do Sistema\n");
-	printf("Opção:");//Fim do menu
-    
-    scanf("%d",&opcao);//Armazenando a escolha do usuario
-    
-    system("cls");
-    
-    switch(opcao)
+	if(comparacao==0)
 	{
+		
+	
+	
+	    system("cls");
+    	for(x=1;x=1;)
+        {
+	
+	
+	
+     	system("cls");
+	
+	
+	
+	
+	   setlocale(LC_ALL,"Portuguese");//Definindo a linguagem
+	
+	   printf("\t!Cartório da Ebac!\t\n\n");//Inicio do menu
+	   printf("\tPor favor,selecione uma das opções abaixo:\n");
+	   printf("\t1-registrar nomes\n");
+	   printf("\t2-Consultar nomes\n");
+	   printf("\t3-Deletar nomes\n\n\n");
+	   printf("\t4-Sair do Sistema\n");
+	   printf("Opção:");//Fim do menu
+    
+       scanf("%d",&opcao);//Armazenando a escolha do usuario
+    
+       system("cls");
+    
+       switch(opcao)
+       {
 		case 1:
 		Registrar();
 		break;
@@ -169,17 +186,27 @@
         break;
         
         case 4:
-        printf("Obrigado por utilizar nosso sistema!");
+        printf("Obrigado por utilizar nosso sistema!Volte sempre!");
         return 0;
 		break;	
         
         default:
-        printf("Essa opção não esta disponível\n");//Fim da seleção
+        printf("Sinto muito,esta opção ainda não foi adicionada:(\n");//Fim da seleção
    		system("pause");
 		break;	
 	
+	   }
+        }
 	}
-    }
+
+    else
+        printf("Senha incorreta!");
+        system("pause");
+        system("cls");
+        printf("Tente novamente!");
+	    main();
+        
+
 }
     
    
